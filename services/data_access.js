@@ -3,7 +3,7 @@ const {MongoClient} = require('mongodb');
 //database access methods
 
 async function load_data(){
-    const uri = "mongodb+srv://adamsjacques546:b5nybfwjh@jcluster.pvqtqqt.mongodb.net/?retryWrites=true&w=majority";
+    const uri = process.env.uri;
     const client = new MongoClient(uri);
     let result= null;
     try {
